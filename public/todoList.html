@@ -16,7 +16,7 @@
             // 함수는 재활용 가능.
             var handleEvent = function(event) {
                 //console.dir(event);
-                demo.innerHTML += "<br>" + todoTxt.value; //한 칸 띄워서 전에 거 밑에 추가해줌
+                demo.innerHTML += "<br>" + `<li>${todoTxt.value}</li>`; //한 칸 띄워서 전에 거 밑에 추가해줌
                 todoTxt.value = "";
                 todoTxt.focus();           
             }
@@ -51,12 +51,12 @@
 <body> 
     할 일: <input type="text" id="todoTxt">
     <p>
-        <ul id="demo">
+        <ul >
             <li>일어나기</li>
             <li>강의 듣기</li>
             <li>점심 먹기</li>
             <li>강의 듣기</li>
-            <li>저녁 먹기</li>
+            <li id="demo">저녁 먹기</li>
         </ul>
     </p>
             
